@@ -4,12 +4,98 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  color: black;
+}
+
+:root {
+  --primary-color: #fdbd29;
+  --primary-color_2: #3e8afd;
+  --primary-color_3: #7d6598;
+  --primary-color_4: #c3a6d2;
+  --border_r: 15px;
 }
 
 body {
   min-height: 100vh;
 }
 
+header {
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  width: min(95%, 1400px);
+  margin: 0 auto;
+}
+
 .flexB {
   display: flex;
+}
+
+button {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.primary_navigation {
+  background-color: var(--primary-color);
+  padding: 10px 30px;
+  border-radius: var(--border_r);
+  gap: 10px 30px;
+  justify-content: space-between;
+}
+
+.dropDownBtn {
+  display: none;
+  opacity: 0;
+  background-color: var(--primary-color);
+  border-radius: var(--border_r);
+  padding: 10px 15px;
+}
+
+.logIn-and-SignUp {
+  gap: 10px;
+}
+
+:is(.logInBtn, .signUpBtn) {
+  padding: 10px;
+  border-radius: var(--border_r);
+  text-wrap: nowrap;
+}
+
+.logInBtn {
+  background-color: var(--primary-color_4);
+}
+
+.signUpBtn {
+  background-color: var(--primary-color_3);
+  color: #fff;
+}
+
+@media (max-width: 970px) {
+  header {
+    gap: 10px;
+  }
+
+  .primary-navigation_and_dropDownBtn {
+    justify-content: flex-end;
+    width: 70%;
+  }
+
+  .primary_navigation {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    top: 60px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dropDownBtn {
+    display: initial;
+    opacity: 1;
+  }
 }

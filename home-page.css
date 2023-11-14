@@ -1,4 +1,4 @@
-.home-page {
+.first_section {
   position: relative;
 }
 
@@ -19,7 +19,6 @@
   background-size: contain;
   background-position: 25% 0;
   min-height: 420px;
-  /* border: 1px solid red; */
 }
 
 .opening_description {
@@ -38,6 +37,56 @@ button.learn_More {
   color: #fff;
 }
 
+.subHeading {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: clamp(0.7rem, 5vw, 2rem);
+}
+
+.task_block_sample {
+  justify-content: center;
+  gap: 10vw;
+}
+
+.robot_svg {
+  width: 250px;
+}
+
+.task_block_layout {
+  min-height: 300px;
+}
+
+.task_info {
+  text-align: center;
+  width: 50%;
+}
+
+.task_type {
+  font-weight: 500;
+}
+
+.block {
+  border: 2px solid #000;
+  width: 350px;
+  min-height: 120px;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.task_connector {
+  background-image: url("Task Connector.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 60px;
+}
+
+.app__icon_svg {
+  width: 70px;
+}
+
 @media (max-width: 1083px) {
   .main_background {
     background-image: url("Mobile-bg.svg");
@@ -50,11 +99,22 @@ button.learn_More {
   }
 
   .opening_description {
-    top: 85%;
+    top: 91%;
     left: 50%;
     transform: translateX(-50%);
     right: auto;
     max-width: 350px;
     text-align: center;
+  }
+
+  .second_section .robot_image {
+    display: none;
+  }
+}
+
+@media (max-width: 406px) {
+  .opening_description {
+    left: auto;
+    transform: translateX(0);
   }
 }

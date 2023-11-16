@@ -29,6 +29,10 @@ body {
   display: flex;
 }
 
+.grid {
+  display: grid;
+}
+
 button {
   cursor: pointer;
   font-size: 20px;
@@ -39,9 +43,13 @@ button {
 .container {
   width: min(95%, 1400px);
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 30px 0;
 }
 
 .section + .section {
-  margin-top: 200px;
+  margin-top: 180px;
+}
+
+.section > .description {
+  text-align: center;
 }

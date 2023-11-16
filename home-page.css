@@ -26,7 +26,7 @@
   top: 50%;
   transform: translateY(-50%);
   right: 10px;
-  /* border: 1px solid red; */
+
   max-width: 250px;
 }
 
@@ -43,7 +43,7 @@ button.learn_More {
   font-size: clamp(0.7rem, 5vw, 2rem);
 }
 
-.task_block_sample {
+.single_task_block_sample {
   justify-content: center;
   gap: 10vw;
 }
@@ -65,18 +65,17 @@ button.learn_More {
   font-weight: 500;
 }
 
-.block {
+.single_task_block_sample .block {
   border: 2px solid #000;
-  width: 350px;
+  width: clamp(15rem, 50vw, 20rem);
   min-height: 120px;
   border-radius: 100px;
   justify-content: center;
   align-items: center;
-
-  gap: 10px;
+  gap: 1vw;
 }
 
-.task_connector {
+.single_task_block_sample .task_connector {
   background-image: url("Task Connector.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -85,6 +84,257 @@ button.learn_More {
 
 .app__icon_svg {
   width: 70px;
+}
+
+.multiple_blocks {
+  justify-content: space-around;
+  align-items: center;
+  gap: 4.5vw;
+}
+
+.multiple_blocks .row {
+  align-items: center;
+}
+
+.row + .row {
+  margin-top: 30px;
+}
+
+.multiple_blocks .grid__of__blocks {
+  width: 90%;
+  max-width: 550px;
+}
+
+.multiple_blocks .block {
+  border: 1px solid #000;
+  width: min(80%, 120px);
+  justify-content: center;
+  padding: 8px 0;
+  height: clamp(3.5rem, 4vw, 7rem);
+  border-radius: var(--border_r);
+}
+
+.multiple_blocks .app__icon_svg {
+  width: min(80%, 70px);
+}
+
+.multiple_blocks .task_connector {
+  background-image: url("Task Connector.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: rotate(90deg);
+  width: 60%;
+  max-width: 50px;
+  height: 40px;
+}
+
+.multiple_blocks .description {
+  background-color: var(--primary-color_4);
+  border-radius: var(--border_r);
+  padding: 15px 10px;
+  font-size: clamp(1rem, 4vw, 1.4rem);
+  width: 50%;
+  min-height: 150px;
+  text-align: center;
+}
+
+.no-code-require {
+  justify-content: space-around;
+  align-items: center;
+  gap: 3vw;
+}
+
+.no-code-require .description {
+  background-color: var(--primary-color);
+  border-radius: var(--border_r);
+  padding: 15px 10px;
+  font-size: clamp(1rem, 4vw, 1.4rem);
+  width: 40%;
+  text-align: center;
+}
+
+.no-code_require_svg {
+  width: min(70%, 500px);
+}
+
+.use_case_scenario {
+  background-color: #f4b7ca;
+  min-height: 300px;
+  border-radius: var(--border_r);
+  align-items: center;
+  gap: 10vw;
+}
+
+.lisa_svg {
+  width: min(90%, 900px);
+}
+
+.use_case_scenario .description {
+  background-color: #fceaea;
+  width: 60%;
+  min-height: 200px;
+  border-radius: var(--border_r);
+  padding: 10px 15px;
+  font-size: clamp(1rem, 3.5vw, 1.4rem);
+}
+
+.use_cases {
+  padding: 40px 0;
+}
+
+.use_cases .scenario {
+  text-align: center;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  font-weight: 500;
+  margin-bottom: 100px;
+}
+
+.use_cases_templates {
+  grid-template-columns: min(90%, 350px);
+  justify-content: center;
+  gap: 8vw;
+}
+
+.use_cases_templates .template {
+  position: relative;
+
+  border-radius: var(--border_r);
+  padding: 30px 20px;
+}
+
+.template_image {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.reduce_errors {
+  background-color: #c3a6d2;
+}
+
+.improved_workflow {
+  background-color: #d9d9d9;
+}
+
+.time_efficiency {
+  background-color: var(--primary-color_2);
+}
+
+.meeting_deadlines {
+  background-color: var(--primary-color);
+}
+
+.increase_job_satishfaction {
+  background-color: var(--primary-color_3);
+}
+
+.real-time-collaborate {
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 500;
+}
+
+.collaborate_image {
+  width: 80%;
+  max-width: 350px;
+}
+
+.real-time-collaborate .second_p {
+  text-align: center;
+}
+
+.mini_tutorial_video .placeholder {
+  border: 1px solid #000;
+  border-radius: var(--border_r);
+  width: 90%;
+  max-width: 900px;
+  min-height: 350px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.playImage {
+  width: 80px;
+}
+
+.row_of_teams {
+  gap: 5vw;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-weight: 500;
+  margin-top: 40px;
+}
+
+.row_of_teams .team {
+  background-color: #eaeaea;
+  border: 1px solid #bababa;
+  width: 150px;
+  min-height: 150px;
+  border-radius: var(--border_r);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.row_of_teams .team_image {
+  width: 60px;
+}
+
+.sign-up-section {
+  position: relative;
+  margin-top: 250px;
+  font-size: clamp(0.5rem, 4vw, 1rem);
+  justify-content: center;
+}
+
+.robot_img {
+  position: absolute;
+  top: -160px;
+  z-index: -1;
+  width: 160px;
+}
+
+.sign-up-section .sign_up {
+  flex-direction: column;
+  background-color: var(--primary-color_2);
+  width: 80%;
+  max-width: 500px;
+  padding: 10px 15px;
+  min-height: 150px;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  border-radius: var(--border_r);
+  font-weight: 500;
+}
+
+.sign_up_buttons {
+  gap: 7vw;
+}
+
+.sign_up_buttons button {
+  padding: 5px 7px;
+  font-size: clamp(0.5rem, 4vw, 1rem);
+}
+
+.sign_up_btn {
+  color: #fff;
+  background-color: #2e4356;
+}
+
+.sign_up .sign_up_btn_via_google_btn {
+  background-color: #fff;
+  align-items: center;
+  gap: 10px;
+}
+
+.google_svg {
+  width: 25px;
 }
 
 @media (max-width: 1083px) {
@@ -110,11 +360,55 @@ button.learn_More {
   .second_section .robot_image {
     display: none;
   }
+
+  .multiple_blocks {
+    flex-direction: column-reverse;
+  }
+
+  .multiple_blocks .description {
+    width: 100%;
+  }
+
+  .no-code-require {
+    flex-direction: column;
+  }
+
+  .no-code-require .description {
+    width: 100%;
+  }
+
+  .use_case_scenario {
+    flex-direction: column;
+  }
+
+  .real-time-collaborate {
+    flex-direction: column;
+  }
+
+  .mini_tutorial_video .placeholder {
+    min-height: 300px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 406px) {
   .opening_description {
     left: auto;
     transform: translateX(0);
+  }
+
+  .mini_tutorial_video .placeholder {
+    min-height: 250px;
+  }
+}
+
+@media (min-width: 850px) {
+  .use_cases_templates {
+    grid-template-columns: repeat(2, min(90%, 350px));
+  }
+
+  .increase_job_satishfaction {
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 }

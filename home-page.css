@@ -192,7 +192,7 @@ button.learn_More {
 .use_cases_templates {
   grid-template-columns: min(90%, 350px);
   justify-content: center;
-  gap: 8vw;
+  gap: 80px 8vw;
 }
 
 .use_cases_templates .template {

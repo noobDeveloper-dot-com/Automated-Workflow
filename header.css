@@ -46,6 +46,11 @@ header {
   color: #fff;
 }
 
+.hamburgerBtn {
+  display: none;
+  width: 20px;
+}
+
 @media (max-width: 970px) {
   header {
     gap: 10px;
@@ -60,13 +65,68 @@ header {
     position: absolute;
     opacity: 0;
     pointer-events: none;
-    top: 60px;
+    top: 85px;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .primary_navigation.view {
+    opacity: 1;
+    pointer-events: auto;
   }
 
   .dropDownBtn {
     display: initial;
     opacity: 1;
+  }
+
+  .dropDownBtn > * {
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 750px) {
+  header {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .primary-navigation_and_dropDownBtn {
+    width: 0;
+  }
+
+  .hamburgerBtn {
+    display: initial;
+    width: 50px;
+  }
+
+  .hamburgerSvg {
+    width: 30px;
+    pointer-events: none;
+  }
+
+  .primary_navigation {
+    top: 65px;
+    left: 0;
+    right: 0;
+  }
+
+  .logIn-and-SignUp {
+    top: 85px;
+    opacity: 0;
+    pointer-events: none;
+    right: 15px;
+    position: absolute;
+    flex-direction: column;
+
+    border-radius: var(--border_r);
+  }
+
+  .logIn-and-SignUp.view {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .dropDownBtn {
+    display: none;
   }
 }

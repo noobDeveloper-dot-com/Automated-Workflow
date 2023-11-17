@@ -1,5 +1,4 @@
 .demo-content .intro > .description {
-  font-size: clamp(0.8rem, 4vw, 1.5rem);
   width: 350px;
   margin-bottom: 80px;
 }

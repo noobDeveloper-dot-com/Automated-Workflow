@@ -1,0 +1,45 @@
+.demo-content .intro > .description {
+  text-align: center;
+  font-size: clamp(0.8rem, 4vw, 1.5rem);
+}
+
+.demo-clip-wrapper .placeholder {
+  border: 1px solid #000;
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+  min-height: 300px;
+  border-radius: var(--border_r);
+}
+
+.other_Demos_wrapper {
+  gap: 8vw;
+}
+
+.rows_of_demos {
+  width: 750px;
+  gap: 5vw;
+  overflow-x: scroll;
+}
+
+.other_Demos_wrapper {
+  align-items: center;
+}
+
+.other_demo {
+  background-color: #d9d9d9;
+  min-width: 230px;
+  min-height: 150px;
+  border-radius: var(--border_r);
+}
+
+.view-more {
+  background-color: var(--primary-color_2);
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .demo-clip-wrapper .placeholder {
+    min-height: 200px;
+  }
+}

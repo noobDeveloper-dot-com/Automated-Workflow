@@ -3,6 +3,7 @@ footer {
   background-color: var(--primary-color_4);
   border-radius: 20px 20px 0 0;
   padding: 20px 30px;
+  margin-top: auto;
 }
 
 .links {

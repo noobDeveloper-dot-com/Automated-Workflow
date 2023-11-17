@@ -33,6 +33,13 @@ header {
 
 [data-dropDownMenu] {
   position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+[data-dropDownMenu].active {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 [data-dropDownMenu="Product"] {
@@ -100,13 +107,13 @@ header {
     opacity: 0;
     pointer-events: none;
     top: 85px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    min-width: 375px;
     flex-direction: column;
-    align-items: flex-start;
-  }
 
-  .primary_navigation .dropDownIcon svg {
-    transform: rotate(90deg);
-    transition: transform 900ms;
+    align-items: center;
   }
 
   .primary_navigation.view {
@@ -122,6 +129,10 @@ header {
   .primary-dropDownBtn > * {
     pointer-events: none;
   }
+
+  [data-dropDownMenu] {
+    position: initial;
+  }
 }
 
 @media (max-width: 750px) {
@@ -134,10 +145,6 @@ header {
     width: 0;
   }
 
-  .primary_navigation .dropDownIcon svg {
-    transform: rotate(-90deg);
-  }
-
   .hamburgerBtn {
     display: initial;
     width: 50px;
@@ -148,19 +155,12 @@ header {
     pointer-events: none;
   }
 
-  .primary_navigation {
-    top: 65px;
-    left: 10px;
-    min-width: 207px;
-    align-items: center;
-    min-height: 200px;
-  }
-
   .logIn-and-SignUp {
-    top: 270px;
+    top: 250px;
     opacity: 0;
     pointer-events: none;
-    left: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     position: absolute;
     background-color: var(--primary-color);
     padding: 10px 15px;

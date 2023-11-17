@@ -1,14 +1,15 @@
 .demo-content .intro > .description {
-  text-align: center;
   font-size: clamp(0.8rem, 4vw, 1.5rem);
+  width: 350px;
+  margin-bottom: 80px;
 }
 
 .demo-clip-wrapper .placeholder {
   border: 1px solid #000;
   width: 80%;
-  max-width: 700px;
+  max-width: 1100px;
   margin: 0 auto;
-  min-height: 300px;
+  min-height: 500px;
   border-radius: var(--border_r);
 }
 
@@ -36,6 +37,12 @@
 .view-more {
   background-color: var(--primary-color_2);
   padding: 10px;
+}
+
+@media (max-width: 950px) {
+  .demo-clip-wrapper .placeholder {
+    min-height: 300px;
+  }
 }
 
 @media (max-width: 600px) {

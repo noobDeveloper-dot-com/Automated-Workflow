@@ -19,12 +19,46 @@ header {
   justify-content: space-between;
 }
 
-.dropDownBtn {
+.primary-dropDownBtn {
   display: none;
   opacity: 0;
   background-color: var(--primary-color);
   border-radius: var(--border_r);
   padding: 10px 15px;
+}
+
+[data-dropDown] {
+  position: relative;
+}
+
+[data-dropDownMenu] {
+  position: absolute;
+}
+
+[data-dropDownMenu="Product"] {
+  top: calc(100% + 10px);
+  left: -30px;
+  background-color: var(--primary-color_3);
+  padding: 10px 15px;
+  width: 250px;
+  border-radius: var(--border_r);
+}
+
+.switch_to_page {
+  gap: 10px;
+  align-items: center;
+}
+
+.switch_to_page + .switch_to_page {
+  margin-top: 7px;
+}
+
+.switch_to_page:hover {
+  color: #fff;
+}
+
+.page_icon {
+  width: 50px;
 }
 
 .logIn-and-SignUp {
@@ -70,17 +104,22 @@ header {
     align-items: flex-start;
   }
 
+  .primary_navigation .dropDownIcon svg {
+    transform: rotate(90deg);
+    transition: transform 900ms;
+  }
+
   .primary_navigation.view {
     opacity: 1;
     pointer-events: auto;
   }
 
-  .dropDownBtn {
+  .primary-dropDownBtn {
     display: initial;
     opacity: 1;
   }
 
-  .dropDownBtn > * {
+  .primary-dropDownBtn > * {
     pointer-events: none;
   }
 }
@@ -95,6 +134,10 @@ header {
     width: 0;
   }
 
+  .primary_navigation .dropDownIcon svg {
+    transform: rotate(-90deg);
+  }
+
   .hamburgerBtn {
     display: initial;
     width: 50px;
@@ -107,17 +150,21 @@ header {
 
   .primary_navigation {
     top: 65px;
-    left: 0;
-    right: 0;
+    left: 10px;
+    min-width: 207px;
+    align-items: center;
+    min-height: 200px;
   }
 
   .logIn-and-SignUp {
-    top: 85px;
+    top: 270px;
     opacity: 0;
     pointer-events: none;
-    right: 15px;
+    left: 10px;
     position: absolute;
-    flex-direction: column;
+    background-color: var(--primary-color);
+    padding: 10px 15px;
+    /* flex-direction: column; */
 
     border-radius: var(--border_r);
   }
@@ -126,7 +173,7 @@ header {
     opacity: 1;
     pointer-events: auto;
   }
-  .dropDownBtn {
+  .primary-dropDownBtn {
     display: none;
   }
 }

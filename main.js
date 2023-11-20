@@ -10,3 +10,4 @@ import "./footer.css";
 // Javascript Files
 
 import "./navigation";
+import "./switch_pages";

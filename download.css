@@ -1,0 +1,53 @@
+.download-page .subMainHeading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.download_instruction_section {
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px 0;
+}
+
+.instruction {
+  width: 40%;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+}
+
+.devices_svg {
+  width: 350px;
+}
+
+.cross_platforms_tab {
+  border-radius: 3rem;
+  background-color: #d9d9d9;
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.device_logo_svg {
+  width: 80px;
+}
+
+button.downloadBtn {
+  background-color: var(--primary-color_2);
+  padding: 10px;
+}
+
+@media (max-width: 760px) {
+  .download_instruction_section {
+    flex-direction: column-reverse;
+  }
+  .instruction {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .devices_svg {
+    width: 250px;
+  }
+}

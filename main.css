@@ -40,7 +40,7 @@ body {
 
 button {
   cursor: pointer;
-  font-size: 20px;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
 
   border-radius: var(--border_r);
 }
@@ -75,11 +75,20 @@ h1.subMainHeading {
   font-size: clamp(0.8rem, 4vw, 1.5rem);
 }
 
-@keyframes appear {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.card {
+  border: 1px solid black;
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+  min-height: 150px;
+  border-radius: var(--border_r);
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.card .description {
+  width: 70%;
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  font-weight: 500;
 }

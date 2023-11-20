@@ -5,6 +5,7 @@ import "./header.css";
 import "./home-page.css";
 import "./demo.css";
 import "./features.css";
+import "./security.css";
 import "./footer.css";
 
 // Javascript Files

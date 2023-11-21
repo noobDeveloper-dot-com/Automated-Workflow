@@ -1,25 +1,25 @@
 // Selectors
 
 const HEADER = document.querySelector("#header");
-const PRIMARY_DROPDOWN_BTN = document.querySelector("#primary-dropDownBtn");
+// const PRIMARY_DROPDOWN_BTN = document.querySelector("#primary-dropDownBtn");
 const HAMBURGER_BTN = document.querySelector("#hamburgerBtn");
 const PRIMARY_NAVIGATION = document.querySelector(".primary_navigation");
 const LOGIN_AND_SIGNUP = document.querySelector(".logIn-and-SignUp");
 
 // Events
-PRIMARY_DROPDOWN_BTN.addEventListener("click", () => {
-  PRIMARY_NAVIGATION.classList.toggle("view");
-  LOGIN_AND_SIGNUP.classList.toggle("view");
-});
 
 HAMBURGER_BTN.addEventListener("click", () => {
   PRIMARY_NAVIGATION.classList.toggle("view");
   LOGIN_AND_SIGNUP.classList.toggle("view");
 });
 
+console.log("hi");
+
 document.addEventListener("click", (e) => {
   // This line checks if the element that was clicked (e.target) is a dropdown button. It does this by checking if the clicked element matches the CSS selector [data-dropdown-button].
   const isDropdownButton = e.target.matches("[data-dropdown-button]");
+
+  console.log(isDropdownButton);
 
   //This line selects all dropdown menus that are currently active (i.e., visible) on the page.
   const dropDownMenus = document.querySelectorAll("[data-dropDownMenu].active");

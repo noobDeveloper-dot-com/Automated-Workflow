@@ -150,10 +150,12 @@ header {
   .primary_navigation {
     position: absolute;
     opacity: 0;
+    left: 0;
     pointer-events: none;
-    top: 85px;
+    top: 100%;
+    width: 160px;
     flex-direction: column;
-
+    min-height: 270px;
     align-items: center;
   }
 
@@ -172,8 +174,14 @@ header {
     pointer-events: none;
   }
 
-  .primary_navigation {
-    left: 10px;
+  [data-dropdown-button] {
+    display: flex;
+
+    align-items: center;
+  }
+
+  [data-dropdown-button]::after {
+    display: block;
   }
 
   /* Drop Down Icon */
@@ -185,14 +193,14 @@ header {
   [data-dropDownMenu] {
     top: 0;
     right: auto;
-    left: calc(100% + 6vw);
+    left: calc(100% + 40px);
   }
 
   .logIn-and-SignUp {
-    top: 300px;
+    top: 270px;
     opacity: 0;
     pointer-events: none;
-
+    left: 0;
     position: absolute;
     background-color: var(--primary-color);
     padding: 10px 15px;

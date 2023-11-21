@@ -3,8 +3,9 @@ header {
   top: 0;
   justify-content: space-between;
   align-items: center;
-  padding: 0 8px;
-  min-height: calc(50px + 5vw);
+  width: min(95%, 1400px);
+  margin: 0 auto;
+  min-height: 60px;
   background-color: #ffffffa3;
   backdrop-filter: blur(5px);
   z-index: 2;
@@ -14,20 +15,16 @@ header {
   cursor: pointer;
 }
 
+.primary-navigation_and_dropDownBtn {
+  gap: 10px;
+}
+
 .primary_navigation {
   background-color: var(--primary-color);
   padding: 0 10px;
-  border-radius: var(--border_r);
+
   gap: 10px 0;
   /* justify-content: space-between; */
-}
-
-.primary-dropDownBtn {
-  display: none;
-  opacity: 0;
-  background-color: var(--primary-color);
-  border-radius: var(--border_r);
-  padding: 10px 15px;
 }
 
 [data-dropDown] {
@@ -46,17 +43,20 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   width: 20px;
-  min-height: 20px;
+  min-height: 10px;
 }
 
 /* The Drop Down Menu */
 
 [data-dropDownMenu] {
   position: absolute;
+
   top: calc(100% + 20px);
-  right: 0;
+  left: 0;
   opacity: 0;
   pointer-events: none;
+  justify-content: center;
+  width: 200px;
 }
 
 /* [data-dropDownMenu]::before {
@@ -76,7 +76,6 @@ header {
 
 [data-dropDownMenu="Product"] {
   background-color: var(--primary-color_3);
-  padding: 10px 15px;
 
   border-radius: var(--border_r);
   z-index: 2;
@@ -85,6 +84,7 @@ header {
 .switch_to_page {
   gap: 10px;
   align-items: center;
+  padding: 5px 10px;
 }
 
 .switch_to_page * {
@@ -103,13 +103,17 @@ header {
   width: 50px;
 }
 
+.contact-sales-link {
+  padding: 10px 0;
+}
+
 .logIn-and-SignUp {
   gap: 10px;
 }
 
 :is(.logInBtn, .signUpBtn) {
   padding: 10px;
-  border-radius: var(--border_r);
+  border-radius: 0;
   text-wrap: nowrap;
 }
 
@@ -128,13 +132,19 @@ header {
 }
 
 @media (max-width: 970px) {
+  [data-dropdown-button]::after {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
   header {
-    gap: 10px;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
   }
 
   .primary-navigation_and_dropDownBtn {
-    justify-content: flex-end;
-    width: 70%;
+    width: 0;
   }
 
   .primary_navigation {
@@ -150,37 +160,6 @@ header {
   .primary_navigation.view {
     opacity: 1;
     pointer-events: auto;
-  }
-
-  .primary-dropDownBtn {
-    display: initial;
-    opacity: 1;
-  }
-
-  /* Drop Down Icon */
-  [data-dropdown-button]::after {
-    transform: rotate(90deg);
-    transition: transform 500ms;
-  }
-
-  [data-dropDownMenu] {
-    top: 0;
-    right: calc(100% + 5vw);
-  }
-
-  .primary-dropDownBtn > * {
-    pointer-events: none;
-  }
-}
-
-@media (max-width: 800px) {
-  header {
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-  }
-
-  .primary-navigation_and_dropDownBtn {
-    width: 0;
   }
 
   .hamburgerBtn {
